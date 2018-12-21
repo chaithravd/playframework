@@ -1,0 +1,25 @@
+@(items1 : Set[Shopping])
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+    <section>
+        <h1 style="text-align:center">DEMO PROJECT</h1>
+        <p>This is a sample project using Play Framework and HTML 5</p>
+    </section>
+    <h1>Total Items:</h1>
+
+    @for(item <- items1){
+        <a href="@routes.ShoppingCart.showItems(item.id)">@item.product</a>
+        <p>Price : @item.price</p>
+        <p>Manufacturer : @item.manufacturer</p>}
+
+        <a href="@routes.ShoppingCart.addItems()">ADD Items</a>
+
+
+</body>
+</html>

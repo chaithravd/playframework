@@ -1,0 +1,15 @@
+@(item : Shopping)
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display_items</title>
+</head>
+<body>
+    <h1>@item.product</h1>
+    <p>Price : @item.price</p>
+    <p>Manufacturer : @item.manufacturer</p>
+
+    <a href="@routes.ShoppingCart.editItems(item.id)">Edit</a>
+    <a href="@routes.ShoppingCart.deleteItems(item.id)">Delete</a>
+</body>
+</html>

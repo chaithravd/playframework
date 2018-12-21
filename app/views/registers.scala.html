@@ -1,0 +1,30 @@
+@(registerForm: Form[views.formdata.Register])
+
+@import helper._
+
+@main("registers"){
+<h1>Register</h1>
+
+@form(routes.Application.postRegister()){
+
+    First Name : <input type="text" name = "@registerForm("First_Name").name" value = "@registerForm("First_Name").value" required><br><br>
+    Last Name : <input type="text" name="@registerForm("Last_Name").name" value = "@registerForm("Last_Name").value" required><br><br>
+    Email : <input type="email" name="@registerForm("Email").name" value = "@registerForm("Email").value" required><br><br>
+    Password : <input type="password" name="@registerForm("Password").name" value = "@registerForm("Password").value" required><br><br>
+    <input type="submit" name="Register" value="Register">
+
+    }
+}
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>--!>
+
+
+<!--
+</body>
+</html>--!>
